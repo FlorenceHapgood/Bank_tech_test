@@ -7,9 +7,6 @@ describe Account do
   let(:account) { described_class.new(fake_money_in, fake_money_out) }
 
   describe "#deposit" do
-    it "confirms to the user that amount deposited had been added to the balance" do
-      expect{ (account.deposit(400)) }.to output("Your deposit of £400 was successful.").to_stdout
-    end
 
     it "creates a new instance of the deposit class and saves it to the history" do
       account.deposit(10)

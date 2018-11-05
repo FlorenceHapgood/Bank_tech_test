@@ -13,24 +13,11 @@ class Account
   end
 
   def deposit(amount)
-    add(amount)
-    confirmation_message(amount)
     history << money_in.new(amount)
   end
 
   def withdraw(amount)
     history << money_out.new(amount)
-  end
-
-  private
-
-  def add(amount)
-    @balance += amount
-  end
-
-
-  def confirmation_message(amount)
-    print "Your deposit of £#{amount} was successful."
   end
 
 

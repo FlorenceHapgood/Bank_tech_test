@@ -21,10 +21,5 @@ describe Account do
     end
   end
 
-  describe "#printer" do
-    it "maps over the history array and gets the array objects" do
-      
-    end
-  end
 
 end

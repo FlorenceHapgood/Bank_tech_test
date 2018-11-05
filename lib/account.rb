@@ -19,6 +19,11 @@ class Account
     history << money_out.new(amount)
   end
 
+  private
 
+  def extract_records
+    @history.map{|array|
+    array.record}
+  end
 
 end

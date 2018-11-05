@@ -1,9 +1,9 @@
 class Money_Out
 
-  attr_reader :with_record
+  attr_reader :record
 
   def initialize(amount)
-    @with_record = { Debit: amount, Date: Date.today.strftime("%v") }
+    @record = { Debit: amount, Date: Date.today.strftime("%v") }
   end
 
 end

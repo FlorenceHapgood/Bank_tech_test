@@ -1,14 +1,10 @@
 require "printer"
 
-# 
-# describe Printer do
-#
-#   let(:history) { double :history, :hash => "object"}
-#
-#   describe "#print" do
-#     it "#prints a statement in a nice format" do
-#       printer = Printer.new
-#       expect(printer.extract(history)).to equal(["object"])
-#     end
-#   end
-# end
+describe Printer do
+  describe "#print" do
+    it "#prints a statement in a nice format" do
+      printer = Printer.new([{:Credit => 10, :Date => "5-Nov-2018", :Balance => 10}])
+      expect(printer.print_statement).to eq(["date || credit || debit || balance"])
+    end
+  end
+end

@@ -1,11 +1,9 @@
-require_relative "account"
 
 class Printer
 
-  def extract(history)
-    history.map{ |history|
-      history.record
-     }
+  def initialize(history)
+    @history = history
   end
+
 
 end

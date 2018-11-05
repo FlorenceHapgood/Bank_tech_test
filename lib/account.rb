@@ -6,6 +6,14 @@ class Account
   end
 
   def deposit(amount)
+    deduct(amount)
+  end
+
+
+  private
+
+  def deduct(amount)
     @balance += amount
   end
+
 end

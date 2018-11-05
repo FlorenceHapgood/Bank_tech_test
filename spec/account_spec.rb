@@ -5,9 +5,8 @@ describe Account do
   let(:account) { described_class.new }
 
   describe "#deposit" do
-    it "adds the amount deposited to the balance" do
-      account.deposit(400)
-      expect(account.balance).to eq(400)
+    it "confirms to the user that amount deposited had been added to the balance" do
+      expect(account.deposit(400)).to output("Deposit of £400 successful, your new balance is £400")
     end
   end
 end

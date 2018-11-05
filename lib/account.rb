@@ -1,7 +1,6 @@
 require_relative "money_in"
 require_relative "money_out"
 
-
 class Account
   attr_reader :balance, :money_in, :money_out, :history
 
@@ -19,6 +18,5 @@ class Account
   def withdraw(amount)
     history << money_out.new(amount)
   end
-
 
 end

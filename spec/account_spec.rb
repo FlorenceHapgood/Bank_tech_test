@@ -6,7 +6,7 @@ describe Account do
 
   describe "#deposit" do
     it "confirms to the user that amount deposited had been added to the balance" do
-      expect(account.deposit(400)).to output("Deposit of £400 successful, your new balance is £400")
+      expect{ (account.deposit(400)) }.to output("Your deposit of £400 was successful.").to_stdout
     end
   end
 end

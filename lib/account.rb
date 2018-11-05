@@ -1,14 +1,15 @@
 class Account
-  attr_reader :balance
+  attr_reader :balance, :money_in
 
-  def initialize
+  def initialize(money_in = Money_in)
     @balance = 0
+    @money_in = money_in
   end
 
   def deposit(amount)
     deduct(amount)
     confirmation_message(amount)
-    
+    money_in.new(400)
   end
 
 

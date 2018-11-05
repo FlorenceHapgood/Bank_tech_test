@@ -2,7 +2,7 @@ require "account"
 
 describe Account do
 
-  let(:fake_money_in) { double :money_in }
+  let(:fake_money_in) { double :money_in, :new => "something" }
   let(:account) { described_class.new(fake_money_in) }
 
   describe "#deposit" do
@@ -11,7 +11,7 @@ describe Account do
     end
 
     it "creates a new instance of a Deposit class" do
-      expect(account.deposit(400)).to equal(account.money_in(400))
+      expect(account.deposit(400)).to equal(account.money_in.new(400))
     end
   end
 

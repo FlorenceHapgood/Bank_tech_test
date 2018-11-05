@@ -12,10 +12,12 @@ class Account
   end
 
   def deposit(amount)
+    add(amount)
     history << money_in.new(amount)
   end
 
   def withdraw(amount)
+    subtract(amount)
     history << money_out.new(amount)
   end
 
@@ -24,6 +26,14 @@ class Account
   def extract_records
     @history.map{|array|
     array.record}
+  end
+
+  def add(amount)
+    @balance += amount
+  end
+
+  def subtract(amount)
+    @balance -= amount
   end
 
 end

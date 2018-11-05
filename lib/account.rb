@@ -11,9 +11,12 @@ class Account
   def deposit(amount)
     deduct(amount)
     confirmation_message(amount)
-    money_in.new(400)
+    new_money_in(amount)
   end
 
+  def new_money_in(amount)
+    money_in.new(amount)
+  end
 
   private
 

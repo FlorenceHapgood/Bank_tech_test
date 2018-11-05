@@ -11,7 +11,7 @@ describe Account do
     end
 
     it "creates a new instance of a Deposit class" do
-      expect(account.deposit(400)).to equal(account.money_in.new(400))
+      expect(account.deposit(5)).to equal(account.money_in.new(5))
     end
   end
 

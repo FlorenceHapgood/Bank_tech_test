@@ -8,6 +8,7 @@ class Account
   def deposit(amount)
     deduct(amount)
     confirmation_message(amount)
+    
   end
 
 
@@ -20,5 +21,6 @@ class Account
   def confirmation_message(amount)
     print "Your deposit of £#{amount} was successful."
   end
+
 
 end

@@ -14,6 +14,11 @@ describe Account do
       expect(account.deposit(5)).to eq(account.money_in.new(5))
     end
 
+    it "saves the deposit to the history" do
+      account.deposit(10)
+      expect(account.history).to include(fake_money_in)
+    end
+
   end
 
 end

@@ -1,11 +1,12 @@
 require_relative "money_in"
 
 class Account
-  attr_reader :balance, :money_in
+  attr_reader :balance, :money_in, :history
 
   def initialize(money_in = Money_In)
     @balance = 0
     @money_in = money_in
+    @history = []
   end
 
   def deposit(amount)

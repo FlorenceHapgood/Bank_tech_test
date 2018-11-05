@@ -1,5 +1,6 @@
 require_relative "money_in"
 
+
 class Account
   attr_reader :balance, :money_in, :history
 

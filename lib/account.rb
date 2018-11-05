@@ -1,26 +1,33 @@
 require_relative "money_in"
+require_relative "money_out"
 
 
 class Account
-  attr_reader :balance, :money_in, :history
+  attr_reader :balance, :money_in, :money_out, :history
 
-  def initialize(money_in = Money_In)
+  def initialize(money_in = Money_In, money_out = Money_Out)
     @balance = 0
     @money_in = money_in
+    @money_out = money_out
     @history = []
   end
 
   def deposit(amount)
-    deduct(amount)
+    add(amount)
     confirmation_message(amount)
     history << money_in.new(amount)
   end
 
+  def withdraw(amount)
+    history << money_out.new(amount)
+  end
+
   private
 
-  def deduct(amount)
+  def add(amount)
     @balance += amount
   end
+
 
   def confirmation_message(amount)
     print "Your deposit of £#{amount} was successful."

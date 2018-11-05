@@ -3,7 +3,7 @@ require_relative "money_in"
 class Account
   attr_reader :balance, :money_in
 
-  def initialize(money_in = Money_in)
+  def initialize(money_in = Money_In)
     @balance = 0
     @money_in = money_in
   end

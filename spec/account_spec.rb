@@ -10,13 +10,9 @@ describe Account do
       expect{ (account.deposit(400)) }.to output("Your deposit of £400 was successful.").to_stdout
     end
 
-    it "creates a new instance of a Deposit class" do
-      expect(account.deposit(5)).to eq(account.money_in.new(5))
-    end
-
-    it "saves the deposit to the history" do
+    it "creates a new instance of the deposit class and saves it to the history" do
       account.deposit(10)
-      expect(account.history).to include(fake_money_in)
+      expect(account.history).to include(fake_money_in.new(5))
     end
 
   end

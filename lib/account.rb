@@ -12,7 +12,7 @@ class Account
   def deposit(amount)
     deduct(amount)
     confirmation_message(amount)
-    money_in.new(amount)
+    history << money_in.new(amount)
   end
 
   private

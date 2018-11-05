@@ -13,12 +13,12 @@ class Account
 
   def deposit(amount)
     add(amount)
-    history << money_in.new(amount)
+    history << money_in.new(amount, @balance)
   end
 
   def withdraw(amount)
     subtract(amount)
-    history << money_out.new(amount)
+    history << money_out.new(amount, @balance)
   end
 
   private

@@ -12,5 +12,10 @@ describe Printer do
       expect{ (printer.print_statement) }.to output("date || credit || debit || balance\n5-Nov-2018 ||  || 20 || 25\n").to_stdout
     end
 
+    it "#prints a statement with a credit and debit transaction in a nice format, in reverse chronological order" do
+      printer = Printer.new([{:Credit => 10, :Debit => "", :Date => "5-Nov-2018", :Balance => 10}, {:Credit => "", :Debit => 20, :Date => "5-Nov-2018", :Balance => 25}])
+      expect{ (printer.print_statement) }.to output("date || credit || debit || balance\n5-Nov-2018 ||  || 20 || 25\n5-Nov-2018 || 10 ||  || 10\n").to_stdout
+    end
+
   end
 end

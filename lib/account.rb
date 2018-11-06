@@ -21,12 +21,12 @@ class Account
     subtract(amount)
     history << money_out.new(amount, @balance)
   end
-  
 
-private
+
+#add in private
 
   def extract_records
-    @history.map{|array|
+    @history.map!{|array|
     array.record}
   end
 

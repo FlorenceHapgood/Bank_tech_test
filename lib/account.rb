@@ -23,7 +23,6 @@ class Account
     history << money_out.new(amount, @balance)
   end
 
-
   def statement()
     extract_records
     printer.print_statement(history)

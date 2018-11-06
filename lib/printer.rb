@@ -15,6 +15,8 @@ attr_reader :history
     }
   end
 
+ private
+
   def reverse
     @history.reverse!
   end

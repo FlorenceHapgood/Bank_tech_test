@@ -22,13 +22,14 @@ class Account
     history << money_out.new(amount, @balance)
   end
 
-
-#add in private
+#move to private
 
   def extract_records
     @history.map!{|array|
     array.record}
   end
+
+  private
 
   def add(amount)
     @balance += amount

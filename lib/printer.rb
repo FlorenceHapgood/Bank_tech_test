@@ -1,24 +1,18 @@
 
 class Printer
 
-attr_reader :history
-
-  def initialize(history)
-    @history = history
-  end
-
-  def print_statement
+  def print_statement(history)
     puts "date || credit || debit || balance"
-    reverse
-    @history.each { |hash|
+    reverse(history)
+    history.each { |hash|
     puts hash[:Date].to_s + " || " + hash[:Credit].to_s + " || " + hash[:Debit].to_s + " || " + hash[:Balance].to_s
     }
   end
 
  private
 
-  def reverse
-    @history.reverse!
+  def reverse(history)
+    history.reverse!
   end
 
 end

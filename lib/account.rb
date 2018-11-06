@@ -3,13 +3,14 @@ require_relative "money_out"
 require_relative "printer"
 
 class Account
-  attr_reader :balance, :money_in, :money_out, :history
+  attr_reader :balance, :money_in, :money_out, :history, :printer
 
-  def initialize(money_in = Money_In, money_out = Money_Out, )
+  def initialize(money_in = Money_In, money_out = Money_Out, printer = Printer.new)
     @balance = 0
     @money_in = money_in
     @money_out = money_out
     @history = []
+    @printer = printer
   end
 
   def deposit(amount)
@@ -23,13 +24,18 @@ class Account
   end
 
 
+  def statement()
+    extract_records
+    printer.print_statement(history)
+  end
+
+
+ private
+
   def extract_records
     @history.map!{|array|
     array.record}
   end
-
- private
-
 
   def add(amount)
     @balance += amount

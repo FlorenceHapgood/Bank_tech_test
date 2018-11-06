@@ -24,7 +24,7 @@ describe Account do
 
   describe "#statement" do
     it "extracts records, creates a new print class and asks it to print a statement" do
-      expect(account.statement).to eq(printer.printer_statement)
+      expect(account.statement).to eq(account.printer.print_statement(account.history))
     end
   end
 end

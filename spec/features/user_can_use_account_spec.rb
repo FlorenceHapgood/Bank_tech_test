@@ -9,8 +9,6 @@ describe "Bank" do
     account.deposit(1000.00)
     account.deposit(2000.00)
     account.withdraw(500.00)
-    account.extract_records
-    printer = Printer.new(account.history)
-    expect{ (printer.print_statement) }.to output("date || credit || debit || balance\n 6-Nov-2018 ||  || 500.0 || 2500.0\n 6-Nov-2018 || 2000.0 ||  || 3000.0\n 6-Nov-2018 || 1000.0 ||  || 1000.0\n").to_stdout
+    expect{ (account.statement) }.to output("date || credit || debit || balance\n 6-Nov-2018 ||  || 500.0 || 2500.0\n 6-Nov-2018 || 2000.0 ||  || 3000.0\n 6-Nov-2018 || 1000.0 ||  || 1000.0\n").to_stdout
   end
 end

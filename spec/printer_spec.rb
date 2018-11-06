@@ -1,10 +1,16 @@
 require "printer"
 
 describe Printer do
-  describe "#print" do
-    it "#prints a statement in a nice format" do
-      printer = Printer.new([{:Credit => 10, :Date => "5-Nov-2018", :Balance => 10}])
+  describe "#print_statement" do
+    it "#prints a statement with a credit transaction in a nice format" do
+      printer = Printer.new([{:Credit => 10, :Debit => "", :Date => "5-Nov-2018", :Balance => 10}])
       expect{ (printer.print_statement) }.to output("date || credit || debit || balance\n5-Nov-2018 || 10 ||  || 10\n").to_stdout
     end
+
+    it "#prints a statement with a debit transaction in a nice format" do
+      printer = Printer.new([{:Credit => "", :Debit => 20, :Date => "5-Nov-2018", :Balance => 25}])
+      expect{ (printer.print_statement) }.to output("date || credit || debit || balance\n5-Nov-2018 ||  || 20 || 25\n").to_stdout
+    end
+
   end
 end

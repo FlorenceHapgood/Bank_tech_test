@@ -20,6 +20,4 @@ describe Account do
       expect(account.history).to include(fake_money_out.new(20))
     end
   end
-
-
 end

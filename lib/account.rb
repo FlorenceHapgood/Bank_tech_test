@@ -5,7 +5,7 @@ require_relative "printer"
 class Account
   attr_reader :balance, :money_in, :money_out, :history
 
-  def initialize(money_in = Money_In, money_out = Money_Out)
+  def initialize(money_in = Money_In, money_out = Money_Out, )
     @balance = 0
     @money_in = money_in
     @money_out = money_out
@@ -22,14 +22,14 @@ class Account
     history << money_out.new(amount, @balance)
   end
 
-#move to private
 
   def extract_records
     @history.map!{|array|
     array.record}
   end
 
-  private
+ private
+
 
   def add(amount)
     @balance += amount

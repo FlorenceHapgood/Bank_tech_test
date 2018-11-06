@@ -1,5 +1,7 @@
 require 'money_in'
+# frozen_string_literal: true
 require 'date'
+
 
 describe Money_In do
 

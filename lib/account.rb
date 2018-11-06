@@ -23,7 +23,7 @@ class Account
     history << money_out.new(amount, @balance)
   end
 
-  def statement()
+  def statement
     extract_records
     printer.print_statement(history)
   end
@@ -32,8 +32,8 @@ class Account
  private
 
   def extract_records
-    @history.map!{|array|
-    array.record}
+    @history.map!{ |array|
+    array.record }
   end
 
   def add(amount)

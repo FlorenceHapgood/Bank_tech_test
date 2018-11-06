@@ -1,11 +1,14 @@
+# frozen_string_literal: true
+
 require_relative 'money_in'
 require_relative 'money_out'
 require_relative 'printer'
-
+# account Class
 class Account
   attr_reader :balance, :money_in, :money_out, :history, :printer
 
-  def initialize(money_in = Money_In, money_out = Money_Out, printer = Printer.new)
+  def initialize(money_in = Money_In, money_out = Money_Out,
+                 printer = Printer.new)
     @balance = 0
     @money_in = money_in
     @money_out = money_out
@@ -28,12 +31,10 @@ class Account
     printer.print_statement(history)
   end
 
-
- private
+  private
 
   def extract_records
-    @history.map!{ |array|
-    array.record }
+    @history.map!(&:record)
   end
 
   def add(amount)
@@ -43,5 +44,4 @@ class Account
   def subtract(amount)
     @balance -= amount
   end
-
 end

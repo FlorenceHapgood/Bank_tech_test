@@ -16,7 +16,7 @@ How to use
 - Clone this file, and run bundle install
 - Run the console with IRB
 
-![image](https://user-images.githubusercontent.com/42243785/48073149-018bf300-e1d6-11e8-9e2e-55d8f24803c2.png)
+![screen shot 2018-11-06 at 15 06 27](https://user-images.githubusercontent.com/42243785/48073535-e077d200-e1d6-11e8-8b70-afc5fff8d292.png)
 
 - Use rspec to run the tests
 

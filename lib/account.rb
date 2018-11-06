@@ -1,6 +1,6 @@
-require_relative "money_in"
-require_relative "money_out"
-require_relative "printer"
+require_relative 'money_in'
+require_relative 'money_out'
+require_relative 'printer'
 
 class Account
   attr_reader :balance, :money_in, :money_out, :history, :printer

@@ -9,4 +9,11 @@ describe Balance do
       expect(balance.add(5)).to eq(5)
     end
   end
+
+  describe "#subract" do
+    it "returns the balance, decreased by the argument amount" do
+      balance.add(10)
+      expect(balance.subtract(5)).to eq(5)
+    end
+  end
 end

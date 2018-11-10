@@ -5,7 +5,7 @@ describe Account do
   let(:fake_money_in) { double :money_in, new: 'something' }
   let(:fake_money_out) { double :money_out, new: 'something else' }
   let(:fake_printer) { double :printer, print_statement: 'another thing' }
-  let(:fake_balance) { double :balance, add: "yet another thing", subtract: "subtracting", balance: "a number"}
+  let(:fake_balance) { double :balance, add: "yet another thing", subtract: "subtracting", total: "a number"}
   let(:account) { described_class.new(fake_money_in, fake_money_out,
                                       fake_printer, fake_balance)
                 }

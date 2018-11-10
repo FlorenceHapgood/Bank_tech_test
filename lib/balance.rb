@@ -2,18 +2,18 @@ require_relative "account"
 
 class Balance
 
-  attr_reader :balance
+  attr_reader :total
 
   def initialize
-    @balance = 0
+    @total = 0
   end
 
   def add(amount)
-    @balance += amount
+    @total += amount
   end
 
   def subtract(amount)
-    @balance -= amount
+    @total-= amount
   end
 
 end

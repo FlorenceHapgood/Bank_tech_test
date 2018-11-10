@@ -20,7 +20,7 @@ class Account
 
   def deposit(amount)
     augment_balance(amount)
-    history << money_in.new(amount, @balance.balance)
+    history << money_in.new(amount, @balance.total)
   end
 
   def augment_balance(amount)
@@ -29,7 +29,7 @@ class Account
 
   def withdraw(amount)
     decrease_balance(amount)
-    history << money_out.new(amount, @balance.balance)
+    history << money_out.new(amount, @balance.total)
   end
 
   def decrease_balance(amount)

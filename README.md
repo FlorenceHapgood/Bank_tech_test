@@ -17,7 +17,7 @@ How to use
 
 ![screen shot 2018-11-06 at 15 06 27](https://user-images.githubusercontent.com/42243785/48073535-e077d200-e1d6-11e8-8b70-afc5fff8d292.png)
 
-- Use rspec to run the tests:
+- Use RSpec to run the tests:
 
 ![screen shot 2018-12-06 at 17 15 19](https://user-images.githubusercontent.com/42243785/49600223-9d964f00-f97a-11e8-9017-dd94f6288bb8.png)
 
@@ -33,7 +33,7 @@ The account class then interacts with the Money_In and Money_Out classes, which 
 
 The printer class deals with formatting and printing the bank statement. This required it’s own class, because formatting is a different concern from processing and storing data. I therefore should have left the formatting of the date itself to this class as well, as at the moment it’s a responsibility of the Money_In and Money_Out classes.
 
-After submitting my test, Sophie (our tutor) offered me feedback that my Account class has two responsibilities: updating the balance and keeping records. As an exericse, I then refactored the Account Class out into a Balance Class, which updates the balance. 
+After submitting my test, Sophie (our tutor) offered me the feedback that my Account class has two responsibilities: updating the balance and keeping records. As an exercise, I then refactored the Account class out into a Balance class, which updates the balance. 
 
 ### Features
 

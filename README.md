@@ -3,7 +3,7 @@
 Description
 ------
 
-This is a tech test for the Bank challenge, set by Makers and completed individually in two working days. 
+This is a tech test for the Bank challenge, set by Makers and completed individually in two working days. Here are the instructions and goals https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md
 
 Features
 -------
@@ -17,7 +17,10 @@ How to use
 
 ![screen shot 2018-11-06 at 15 06 27](https://user-images.githubusercontent.com/42243785/48073535-e077d200-e1d6-11e8-8b70-afc5fff8d292.png)
 
-- Use rspec to run the tests
+- Use rspec to run the tests:
+
+![screen shot 2018-12-06 at 17 15 19](https://user-images.githubusercontent.com/42243785/49600223-9d964f00-f97a-11e8-9017-dd94f6288bb8.png)
+
 
 My approach:
 ------
@@ -55,8 +58,16 @@ I am, however, open to other ways of working.
 Other things that I would do if I had more time:
 ------
 
-I fell into the trap of leaving rubocop until the end and having an overwhelming amount of errors to deal with. I still have some tricky rubocop offences left, so if I had more time I would deal with those. 
+* I fell into the trap of leaving rubocop until the end and having an overwhelming amount of errors to deal with. I still have some tricky rubocop offences left, so if I had more time I would deal with those. 
 
-Unfortunately, the user would have to create a new instance of the account class if they want to print out a second, different statement. I did this because I had difficulties earlier creating a mock class object (ideally, I would call a "new" on it, and then another method. That latter step was the difficulty) and I wanted to avoid that problem again. If I had more time, I would research how to do this. 
+* Unfortunately, the user would have to create a new instance of the account class if they want to print out a second, different statement. I did this because I had difficulties earlier creating a mock class object (ideally, I would call a "new" on it, and then another method. That latter step was the difficulty) and I wanted to avoid that problem again. If I had more time, I would research how to do this.
+
+* I should have been more specific with the formatting of the balance, as there are spaces where there shouldn't be. 
+
+* Some attributes are public which shouldn't be. 
+
+* I should have written a couple more feature tests.
+
+
 
 

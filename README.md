@@ -1,4 +1,4 @@
-# Bank_tech_test
+# Bank Tech Test
 
 Description
 ------
@@ -25,7 +25,7 @@ How to use
 My approach:
 ------
 
-### Classes:
+### Classes
 
 Knowing that this test was designed to be used with a REPL, I decided to have an account class as the main class that the user interacts with. This simplifies REPL commands, as they only have to create a new instance of the account class, rather instance of other classes as well. I also used method names that were very intuitive for the commands that the user has to interact with (withdraw, deposit and statement).
 
